@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Custom CSS for styling -->
+    <style>
+        body {
+            /* Ajoutez la propriété background-image avec l'URL de votre image */
+            background-image: url('./static/img/img3.jpg');
+            background-size: cover; /* Pour s'assurer que l'image couvre toute la zone */
+        }
+
+        .register-container {
+            max-width: 400px;
+            margin: auto;
+            margin-top: 50px;
+            background-color:black;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .register-container h2 {
+            color: white;
+            text-align: center;
+        }
+
+        .register-container label {
+            font-weight: bold;
+        }
+
+        .register-container .form-group {
+            margin-bottom: 15px;
+        }
+
+        .register-container button {
+            width: 100%;
+        }
+
+        .registration-success {
+            text-align: center;
+            color: red; /* Green color for success message */
+            margin-top: 10px;
+        }
+        .form-group {
+            color: antiquewhite;
+        }
+     
+    
+    </style>
+</head>
+<body>
+    <div class="container register-container">
+        <h2>Register</h2>
+        <form method="post" action="/register">
+            <!-- Email field -->
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <!-- Password field -->
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+
+            <!-- Confirm Password field -->
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js (optional, but may be required for certain Bootstrap components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

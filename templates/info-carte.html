@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Paiement</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('./static/img/img3.jpg');
+            background-size: cover; 
+
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: black;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+        h2{
+            text-align: center;
+            color: antiquewhite;
+        }
+        .time-label, .time-input {
+    color: antiquewhite;
+}
+
+.amount-label, .amount-input {
+    color: antiquewhite
+}
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Entrez les informations de votre carte bancaire</h2>
+        <form id="payment-form">
+            <label for="time" class="time-label">Time:</label>
+            <input type="text" id="time" name="time" placeholder="Enter the time" class="time-input">
+            
+            <label for="amount" class="amount-label">Amount:</label>
+            <input type="text" id="amount" name="amount" placeholder="Enter the amount" class="amount-input">
+
+            <input type="submit" value="Predict Transaction" action="{{ url_for('predict_realtime') }}" > 
+        </form>
+
+        <div id="result" class="error"></div>
+    </div>
+</body>
+
+</html>

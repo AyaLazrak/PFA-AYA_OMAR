@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="user.png" type="image/x-icon"/>
+    <title>Fraud Detection-Login</title>
+
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Custom CSS for styling -->
+    <style>
+        body {
+            /* Ajoutez la propriété background-image avec l'URL de votre image */
+            background-image: url('./static/img/img3.jpg');
+            background-size: cover; /* Pour s'assurer que l'image couvre toute la zone */
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: auto;
+            margin-top: 50px;
+            background-color: black;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+
+        .login-container h2 {
+            color: grey;
+            text-align: center;
+        }
+
+        .login-container label {
+            font-weight: bold;
+        }
+
+        .login-container .form-group {
+            margin-bottom: 15px;
+        }
+
+        .login-container button {
+            width: 100%;
+        }
+
+        /* Additional style for the registration text */
+        .register-text {
+            text-align: center;
+            margin-top: 15px;
+            color: gray;
+        }
+
+        /* Style for the register link button */
+        .register-button {
+            color: #fff;
+            background-color: skyblue; /* Change to the desired color */
+            border: 1px solid skyblue; /* Change to the desired color */
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* Style for the title */
+        .title {
+            font-weight: bold;
+            color: black;
+            text-align: center;
+
+        }
+
+        .title:hover{
+            cursor: pointer;
+            color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <!-- Titre en gras -->
+    <h1 class="title">Detection de Fraude par cartes bancaires</h1>
+
+    <div class="container login-container">
+        <h2>Login</h2>
+        <!-- Modifiez l'attribut action du formulaire pour rediriger vers info-carte.html -->
+        <form method="post" action="{{ url_for('info_card') }}">
+
+            <!-- Email field -->
+            <div class="form-group">
+                <label for="email" style="color: antiquewhite;">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+
+            <!-- Password field -->
+            <div class="form-group">
+                <label for="password" style="color: antiquewhite;">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="btn btn-primary" >Login</button>
+        </form>
+
+        <!-- Registration text with custom color for the link button -->
+        <!-- Modifiez l'attribut href pour rediriger vers register.html -->
+        <p class="register-text">Don't have an account? <a class="register-button" href="{{url_for('register')}}">Register</a></p>
+    </div>
+
+
+    <!-- Add Bootstrap JS and Popper.js (optional, but may be required for certain Bootstrap components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
