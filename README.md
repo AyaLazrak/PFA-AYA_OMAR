@@ -21,4 +21,4 @@ Projet en cours de réalisation par :
   
 # Explication :
 - https://github.com/AyaLazrak/PFA-AYA_OMAR/tree/main/templates Dans le lien suivant se trouve le front qu'on a realiser
-- 
+- https://github.com/AyaLazrak/PFA-AYA_OMAR/tree/main/treatement  Dans ce lien se trouve le Backend , AI et API 
